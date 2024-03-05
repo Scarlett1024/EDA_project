@@ -60,7 +60,7 @@ compare_means
 ```
 
 ```{r}
-p1 <- ggplot(newbk, aes(x = cnt)) +
+p1 <- ggplot(by_yr, aes(x = cnt)) +
   geom_histogram(color="darkblue", fill="lightblue", binwidth = 60) +
   labs(title = "Total Rental Bikes by Year",
        x = "Total Rental Bikes")
@@ -100,7 +100,7 @@ ggplot(data = bk_hr, aes(x= temp, y = cnt)) +
    theme_minimal()
 ```
 
-##### Central tendencies for other variables 
+##### Central tendencies for other variables
 
 ```{r}
 central_temp <- bk_hr %>%
