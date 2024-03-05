@@ -1,0 +1,147 @@
+---
+title: "QTM302W"
+format: html
+editor: visual
+---
+
+#### Load packages
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+```
+
+#### Import and view dataset
+
+```{r}
+bk_hr <- read.csv("~/Desktop/bike_sharing/EDA_project/data/hour.csv")
+bk_hr
+names(bk_hr)
+```
+
+### Variables
+
+-   temp: Normalized temperature in Celsius.
+
+-   atemp: Normalized feeling temperature in Celsius.
+
+-   hum: Normalized humidity. The values are divided to 100 (max)
+
+-   windspeed: Normalized wind speed. The values are divided to 67 (max)
+
+-   casual: count of casual users
+
+-   registered: count of registered users
+
+-   cnt: count of total rental bikes including both casual and registered
+
+```{r}
+# check for missing values 
+sum(is.na(bk_hr))
+```
+
+##### Variable cnt
+
+```{r}
+summary (bk_hr$cnt)
+```
+
+```{r}
+by_yr <-bk_hr %>%
+  mutate(year = recode(yr, `0` = 2011, `1` = 2012))
+
+compare_means <- by_yr %>%
+  group_by (year) %>%
+  select (year, cnt, registered, casual) %>%
+  summarise (Toal_rental_mean = mean (cnt), mean_registered = mean (registered), mean_casual_user = mean (casual)) 
+compare_means
+
+```
+
+```{r}
+p1 <- ggplot(newbk, aes(x = cnt)) +
+  geom_histogram(color="darkblue", fill="lightblue", binwidth = 60) +
+  labs(title = "Total Rental Bikes by Year",
+       x = "Total Rental Bikes")
+p1 + geom_vline(aes(xintercept=mean(cnt)),
+            color="blue", linetype="dashed", size=1)
+p1 + facet_wrap(~year)
+```
+
+```{r}
+by_szn <- bk_hr %>%
+  mutate(season = recode(season, `1` = "Winter", `2` = "Spring",`3` = "Summer", `4` = "Fall")) %>%
+  group_by (season) %>%
+  summarise (cnt = mean (cnt)) %>%
+  select (season, cnt) 
+by_szn
+```
+
+```{r}
+p3 <- ggplot(by_szn, aes(x = season, y = cnt, fill = season)) +
+  geom_bar(stat = "identity", width = 0.5, alpha = 0.8) +
+  labs(title = "Total Rental Bikes by Season",
+       x = "Seasons",
+       y = "Total Rental Bikes")
+p3
+```
+
+```{r}
+mod_1 <- lm(cnt~temp, bk_hr)
+summary (mod_1)
+predicted_rent <-  predict(mod_1, rent = bk_hr$cnt)
+predicted_df1 <- data.frame(temp = bk_hr$temp, rent = predicted_rent)
+
+ggplot(data = bk_hr, aes(x= temp, y = cnt)) + 
+  geom_point(color="lightblue", alpha = 0.2, size = 2) +
+  geom_line (data = predicted_df1, 
+             aes (x = temp, y = rent), color = "plum", lwd = 1)
+   theme_minimal()
+```
+
+##### Central tendencies for other variables 
+
+```{r}
+central_temp <- bk_hr %>%
+  group_by(yr) %>%
+  summarize(sd(temp), mean(temp), median(temp))
+central_temp
+```
+
+```{r}
+central_atemp <- bk_hr %>%
+  group_by(yr) %>%
+  summarize(sd(atemp), mean(atemp), median(atemp))
+central_atemp
+```
+
+```{r}
+central_hum <- bk_hr %>%
+  group_by(yr) %>%
+  summarize(sd(hum), mean(hum), median(hum))
+central_hum
+```
+
+```{r}
+central_wspd <- bk_hr %>%
+  group_by(yr) %>%
+  summarize(sd(windspeed), mean(windspeed), median(windspeed))
+central_wspd
+```
+
+```{r}
+central_casual <- bk_hr %>%
+  group_by(yr) %>%
+  summarize(sd(casual), mean(casual), median(casual))
+central_casual
+
+```
+
+```{r}
+central_reg <- bk_hr %>%
+  group_by(yr) %>%
+  summarize(sd(registered), mean(registered), median(registered))
+central_reg
+
+```
