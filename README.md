@@ -50,6 +50,10 @@ Moving forward, we can delve deeper into specific patterns, trends, and correlat
    - Change the file path of the dataset in read.csv() to match the file path of 'hour.csv' on your local machine.
    - Run the code to replicate analysis.
 
+## View of Analysis Directly via HTML 
+If you prefer to directly view our analysis without reproducing the work on you local machine, copy and paste "https://github.com/Scarlett1024/EDA_project/blob/master/analysis%20/EDA_Code_Notebook.html" into the following website, https://htmlpreview.github.io/? . 
+This will open up the HTML file onto your webpage. 
+
 
 ## Directory Structure
 ``` bash
