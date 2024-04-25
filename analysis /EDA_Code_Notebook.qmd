@@ -95,7 +95,7 @@ We start with importing the dataframe and performing initial exploratory data an
 The dataset, **`bike_data`**, is read from a CSV file using the **`read.csv()`** function. We then extract the variable names, dimensions, and identify any missing values in the dataset using functions like **`names()`**, **`dim()`**, and **`sum(is.na())`**, respectively. Additionally, we examine the structure of the dataset, including variable types and a preview of the data, using the **`str()`** function.
 
 ```{r data_structure}
-# Read dataset 
+# read dataset
 bike_data <- read.csv("~/Desktop/bike_sharing/EDA_project/data/hour.csv")
 
 # Extract variable names from the dataset
