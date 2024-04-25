@@ -47,6 +47,10 @@ We employed Ordinary Least Squares (OLS) regression analysis to forecast the vol
 
 
 ## Contributing Members
+
+
+|Name     |  Github Username   | 
 |---------|-----------------|
-|[Dawit Dean](https://github.com/Uchimata1  |
-|[Scarlett Wu](https://github.com/Scarlett1024) |
+|[Dawit Dean](https://github.com/Uchimata1)| @Uchimata1       |
+|[Scarlett Wu](https://github.com/Scarlett1024) |     @Scarlett1024    |
+
