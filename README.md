@@ -45,7 +45,7 @@ Moving forward, we can delve deeper into specific patterns, trends, and correlat
 1. Raw Data is being kept [here](data/hour.csv) within this repo.
 2. Follow setup:
    - Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-   - In commend window, use `use::resotre()` to install packages recorded in the lockfile.
+   - In commend window, use `use::restore()` to install packages recorded in the lockfile.
    - Access '\EDA_project\analysis\EDA_Code_Notebook.qmd'
    - Change the file path of the dataset in read.csv() to match the file path of 'hour.csv' on your local machine.
    - Run the code to replicate analysis.
