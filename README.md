@@ -40,7 +40,7 @@ We employed Ordinary Least Squares (OLS) regression analysis to forecast the vol
 
 ## Getting Started
 1. Clone this repo (for help see this [tutorial](https://help.github.com/articles/cloning-a-repository/)).
-2. Raw Data is being kept [here](EDA_project/data/hour.csv) within this repo.
+2. Raw Data is being kept [here](data/hour.csv) within this repo.
 3. Follow setup [instructions](Link to file)
 
 
