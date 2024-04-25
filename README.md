@@ -48,7 +48,7 @@ Moving forward, we can delve deeper into specific patterns, trends, and correlat
 
 
 ## Directory Structure
-
+``` bash
 EDA_project
 ├── analysis
 │   ├── project_files
@@ -92,8 +92,7 @@ EDA_project
 │   ├── settings.json
 │   └── staging
 └── renv.lock
-Readme.txt
-
+```
 
 ## Contributing Members
 
