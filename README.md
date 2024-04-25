@@ -49,52 +49,50 @@ Moving forward, we can delve deeper into specific patterns, trends, and correlat
 
 ## Directory Structure
 
-
-└── bike_sharing
-    ├── EDA_project
-    │   ├── analysis
-    │   │   ├── project_files
-    │   │   │   ├── figure-html
-    │   │   │   │   ├── bar_1.png
-    │   │   │   │   ├── bar_2.png
-    │   │   │   │   ├── bar_3.png
-    │   │   │   │   ├── bar_4.png
-    │   │   │   │   ├── bar_5.png
-    │   │   │   │   ├── bar_6.png
-    │   │   │   │   ├── bar_7.png
-    │   │   │   │   ├── bar_8.png
-    │   │   │   │   └── bar_9.png
-    │   │   │   └── libs
-    │   │   │       ├── bootstrap
-    │   │   │       │   ├── bootstrap-icons.css
-    │   │   │       │   ├── bootstrap-icons.woff
-    │   │   │       │   ├── bootstrap.min.css
-    │   │   │       │   └── bootstrap.min.js
-    │   │   │       ├── clipboard
-    │   │   │       │   └── clipboard.min.js
-    │   │   │       └── quarto-html
-    │   │   │           ├── anchor.min.js
-    │   │   │           ├── popper.min.js
-    │   │   │           ├── quarto-syntax-highlighting.css
-    │   │   │           ├── quarto.js
-    │   │   │           ├── tippy.css
-    │   │   │           └── tippy.umd.min.js
-    │   │   ├── EDA_Code_Notebook.qmd
-    │   │   └── EDA_Code_Notebook.html
-    │   ├── data
-    │   │   ├── day.csv
-    │   │   └── hour.csv
-    │   ├── EDA_project.Rproj
-    │   ├── renv
-    │   │   ├── activate.R
-    │   │   ├── library
-    │   │   │   └── R-4.3
-    │   │   │       └── x86_64-apple-darwin20
-    │   │   │           └── ALL THE PACKAGES USED
-    │   │   ├── settings.json
-    │   │   └── staging
-    │   └── renv.lock
-    └── Readme.txt
+EDA_project
+├── analysis
+│   ├── project_files
+│   │   ├── figure-html
+│   │   │   ├── bar_1.png
+│   │   │   ├── bar_2.png
+│   │   │   ├── bar_3.png
+│   │   │   ├── bar_4.png
+│   │   │   ├── bar_5.png
+│   │   │   ├── bar_6.png
+│   │   │   ├── bar_7.png
+│   │   │   ├── bar_8.png
+│   │   │   └── bar_9.png
+│   │   └── libs
+│   │       ├── bootstrap
+│   │       │   ├── bootstrap-icons.css
+│   │       │   ├── bootstrap-icons.woff
+│   │       │   ├── bootstrap.min.css
+│   │       │   └── bootstrap.min.js
+│   │       ├── clipboard
+│   │       │   └── clipboard.min.js
+│   │       └── quarto-html
+│   │           ├── anchor.min.js
+│   │           ├── popper.min.js
+│   │           ├── quarto-syntax-highlighting.css
+│   │           ├── quarto.js
+│   │           ├── tippy.css
+│   │           └── tippy.umd.min.js
+│   ├── EDA_Code_Notebook.qmd
+│   └── EDA_Code_Notebook.html
+├── data
+│   ├── day.csv
+│   └── hour.csv
+├── EDA_project.Rproj
+├── renv
+│   ├── activate.R
+│   ├── library
+│   │   └── R-4.3
+│   │       └── x86_64-apple-darwin20
+│   │           └── ALL THE PACKAGES USED
+│   ├── settings.json
+│   └── staging
+└── renv.lock
+Readme.txt
 
 
 ## Contributing Members
