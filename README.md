@@ -29,6 +29,8 @@ The Bike Sharing Dataset, curated by Hadi Fanaee-T at the Laboratory of Artifici
 
 In our Analysis we employed Ordinary Least Squares (OLS) regression analysis to forecast the volume of bike rentals. To identify pertinent independent variables for our model, we conducted an analysis of the Pearson correlation coefficients among our independent variables, thus facilitating a comprehensive comprehension of the inherent correlations among the variables under scrutiny. Furthermore, we leveraged diverse visualization methods, such as bar plots, to elucidate the association between our categorical variables and the response variable, namely the count of bike rentals.
 
+Moving forward, we can delve deeper into specific patterns, trends, and correlations within the data, such as different rental behaviors between casual and registered users in different geographic conditions. Additionally, we can explore predictive modeling techniques to forecast rental demand using a time series model.
+
 
 ## Needs of this project
 - data exploration/descriptive statistics
@@ -46,7 +48,8 @@ In our Analysis we employed Ordinary Least Squares (OLS) regression analysis to 
 
 
 ## Directory Structure
-.
+
+
 └── bike_sharing
     ├── EDA_project
     │   ├── analysis
